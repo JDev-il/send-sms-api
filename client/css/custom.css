@@ -1,0 +1,732 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+h1 {font-size: 4em;}
+h2 {font-size: 3.5em;}
+h3 {font-size: 3em;}
+h4 {font-size: 2.5em;}
+h5 {font-size: 2em;}
+h6 {font-size: 1.5em;}
+
+p, a, button {
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
+
+/*============  End of Initial Settings  =============*/
+
+
+    /*=============================================
+    =                  Header                   =
+    =============================================*/
+    
+    
+    
+        
+        .header {
+            display: flex; 
+            align-items: center;
+            height: auto;
+            margin-top: 50px;
+            height: 30vh;
+            background: linear-gradient(to bottom,rgb(26, 179, 148), rgb(71, 249, 198));
+            text-align: center;
+            box-shadow: 0 3px 5px 0 rgba(70, 70, 70, 0.379);
+            margin-left: 112px;
+            margin-right: 112px;
+            border-radius: 10px;
+        }
+        ._headerBg {
+            position: absolute;
+            margin-left: 250px;
+        }
+
+        ._headerBg img {
+            width: 100px;
+            height: auto;
+            z-index: 0;
+        }
+
+        .headerContent {
+            width: 100%;
+        }
+
+        .header h1, p {
+            color: rgb(214, 243, 255) !important;
+            text-shadow: 1px 2px 1px rgba(70, 70, 70, 0.379);
+            z-index: 10;
+        }
+
+
+    /*============  End of Header =============*/
+
+
+
+
+    /*=============================================
+    =                   Section                   =
+    =============================================*/
+
+    .btnDiv {
+        margin-top: 10vh;        
+        margin-left: 35vw;
+        margin-right: 35vw;
+        z-index: 10;
+    }
+
+    .smsBtn {   
+        padding: 10px;
+        color: rgba(36, 49, 64, 0.79);
+        z-index: 12;
+        background: rgb(71, 249, 198);
+        box-shadow: 0 0 1px 0 rgb(36,49,64);
+        transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border-radius: 10px;
+    }
+    
+    .smsBtn:hover {
+        color: rgb(36,49,64);
+        transform: translateY(-4px);
+        background: rgba(71, 249, 198, 0.708);
+        box-shadow: 0 2px 6px 0px rgb(36,49,64);
+    }
+
+    .dataTable {
+        margin-top: 7vh;
+        padding-top: 8vh;
+        padding-bottom: 8vh;
+        background: rgb(216, 243, 255);
+        box-shadow: 0 4px 8px 1px rgba(36, 49, 64, 0.31);
+    }
+    
+    .table {
+        border-radius: 10px;
+        z-index: 10;
+        color: rgb(216, 243, 255);
+        background:rgb(36,49,64);
+        box-shadow: 0 1px 5px 1px rgb(36,49,64);
+        transition: all .4s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    .table th, .table td {
+        overflow: auto;
+        justify-content: center;
+        border: none !important;
+        padding: 20px
+    }
+    
+    .table:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px 1px rgb(36,49,64);
+    }
+    
+    /*============  End of Section  =============*/
+
+
+
+    /*=============================================
+    =                   Modal                   =
+    =============================================*/
+    
+    .modal form {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .modal form label {
+        color: rgb(140, 140, 140) !important
+    }
+    .modal form input, .modal form textarea {
+        border-radius: 6px;
+        border-color: rgba(36, 49, 64, 0.262);
+        color: rgb(36,49,64);
+        background-color: rgba(140, 140, 140, 0.153);
+        transition: all .4s !important;
+    }
+    .modal input:focus, .modal textarea:focus {
+        border-color: transparent !important;
+        background: rgba(71, 249, 198, 0.139);
+    }
+    .modal input:valid, .modal textarea:valid {
+        background-color: rgba(216, 243, 255, 0.413)
+    }
+
+    form .countryNumber {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+    }
+    
+    .modal form button {
+        margin-top: 20px;
+        background: rgb(36,49,64);
+        color: rgb(214, 243, 255);
+        width: 100%;
+        border: none;
+        transition: all .4s ease-in-out;
+
+    }
+    .modal form button:hover {
+        color: rgb(36,49,64);
+        background: rgb(214, 243, 255);
+    }
+
+
+/*============  End of Modal  =============*/
+
+
+
+
+
+/*=============================================
+=                   Media Queries             =
+=============================================*/
+
+
+        /** HD Ready Screen **/    
+        @media screen and (max-width: 1366px){
+            ._headerBg {
+                margin-left: 160px;
+            }
+        }
+    /** HD Ready Screen **/    
+
+
+    /** Large Laptop Screen **/    
+        @media screen and (max-width: 992px){
+            ._headerBg {
+                margin-left: 80px;
+            }
+        }
+    /** Large Laptop Screen **/
+
+
+    /** Small Laptop Screen **/
+    @media screen and (max-width: 768px){
+            
+            .header {
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: 0;
+                border-radius: 0;
+            }
+            .headerContent {
+                font-size: 10px;
+            }                
+            ._headerBg {
+                margin-left: 30px;
+                margin-top: 30px;
+            }   
+            ._headerBg img {
+                width: 40px;
+            }
+            
+        }
+    /** Small Laptop Screen **/
+
+
+
+    /* iPhone 6/7+ 
+    -------------------------------------------------- */
+
+    @media only screen 
+    and (min-device-width: 414px) 
+    and (max-device-width: 736px) 
+    and (orientation: portrait){
+
+
+        .headerContent {
+            font-size: 12px !important;
+        }                
+        ._headerBg {
+            margin-left: 90px;
+            margin-top: 35px;
+        } 
+        ._headerBg img {
+            width: 30px;
+        }
+
+        /*Send SMS Btn*/
+
+        .btnDiv {        
+            margin-left: 55px;
+            margin-right: 55px;
+        }
+    
+        .smsBtn:hover {
+            transform: translateY(0);
+            background: rgb(71, 249, 198);
+            box-shadow: 0 2px 6px 1px rgb(36,49,64);
+        }
+        /* Send SMS Btn */
+
+
+        /* Table */
+
+        .dataTable {
+            margin-top: 30px;
+            padding-top: 60px;
+            padding-bottom: 40px;
+            box-shadow: 0 4px 8px 1px rgba(36, 49, 64, 0.31);
+        }
+        
+        .table {
+            border-radius: 0;
+            box-shadow: 0 3px 8px 1px rgb(36,49,64);
+
+        }
+        .table th, .table td {
+            padding: 10px;
+        }
+
+        .table:hover {
+            transform: translateY(0);
+            box-shadow: none !important;
+        }
+
+        /* Table */
+
+
+        /* Modal */
+
+        .modal {
+            margin-top: 60px;
+        }
+        .modal form {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        /* Modal */
+    
+    }
+
+    /****************************/
+
+    @media only screen 
+    and (min-device-width: 414px) 
+    and (max-device-width: 736px) 
+    and (orientation: landscape){
+        
+        .header {
+            height: 40vh;
+        }
+        .headerContent {
+            margin-top: 10px;
+            font-size: 11px;
+        }                
+        ._headerBg {
+            margin-left: 260px;
+            margin-top: 35px;
+        } 
+        ._headerBg img {
+            width: 30px;
+        }
+
+        /*Send SMS Btn*/
+
+        .btnDiv {        
+            margin-top: 50px;
+            margin-left: 180px;
+            margin-right: 180px;
+        }
+    
+        .smsBtn:hover {
+            transform: translateY(0);
+            background: rgb(71, 249, 198);
+            box-shadow: 0 2px 6px 1px rgb(36,49,64);
+        }
+        /* Send SMS Btn */
+
+
+        /* Table */
+
+        .dataTable {
+            margin-top: 30px;
+            padding-top: 60px;
+            padding-bottom: 40px;
+            box-shadow: 0 4px 8px 1px rgba(36, 49, 64, 0.31);
+        }
+        
+        .table {
+            border-radius: 0;
+            box-shadow: 0 3px 8px 1px rgb(36,49,64);
+        }
+
+        .table th, .table td {
+            padding: 20px;
+        }
+
+        .table:hover {
+            transform: translateY(0);
+            box-shadow: none !important;
+        }
+
+        /* Table */
+
+
+        /* Modal */
+
+        .modal {
+            margin-top: 0px;
+        }
+        .modal form {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        /* Modal */
+    
+    }
+
+
+
+
+
+
+    /* iPhone X / 11 
+    -------------------------------------------------- */
+
+    @media only screen 
+    and (min-device-width: 375px) 
+    and (max-device-width: 812px) 
+    and (orientation: portrait){
+
+        .headerContent {
+            font-size: 10px !important;
+        }                
+        ._headerBg {
+            margin-left: 90px;
+            margin-top: 35px;
+        } 
+        ._headerBg img {
+            width: 30px;
+        }
+
+        /*Send SMS Btn*/
+
+        .btnDiv {        
+            margin-top: 60px;
+            margin-left: 55px;
+            margin-right: 55px;
+        }
+    
+        .smsBtn:hover {
+            transform: translateY(0);
+            background: rgb(71, 249, 198);
+            box-shadow: 0 2px 6px 1px rgb(36,49,64);
+        }
+        /* Send SMS Btn */
+
+
+        /* Table */
+
+        .dataTable {
+            margin-top: 35px;
+            padding-top: 60px;
+            padding-bottom: 45px;
+            box-shadow: 0 4px 8px 1px rgba(36, 49, 64, 0.31);
+        }
+        
+        .table {
+            border-radius: 0;
+            box-shadow: 0 3px 8px 1px rgb(36,49,64);
+
+        }
+        .table th, .table td {
+            padding: 15px;
+        }
+
+        .table:hover {
+            transform: translateY(0);
+            box-shadow: none !important;
+        }
+
+        /* Table */
+
+
+        /* Modal */
+
+        .modal {
+            margin-top: 60px;
+        }
+        .modal form {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        /* Modal */
+    
+    }
+
+    /****************************/
+
+    @media only screen 
+    and (min-device-width: 375px) 
+    and (max-device-width: 812px) 
+    and (orientation: landscape){
+        
+        .header {
+            height: 40vh;
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            border-radius: 0;
+        }
+
+        .headerContent {
+            margin-top: 10px;
+            font-size: 11px;
+        }                
+        ._headerBg {
+            margin-left: 270px;
+            margin-top: 35px;
+        } 
+        ._headerBg img {
+            width: 30px;
+        }
+
+        /*Send SMS Btn*/
+
+        .btnDiv {        
+            margin-top: 50px;
+            margin-left: 220px;
+            margin-right: 220px;
+        }
+    
+        .smsBtn:hover {
+            transform: translateY(0);
+            background: rgb(71, 249, 198);
+            box-shadow: 0 2px 6px 1px rgb(36,49,64);
+        }
+        /* Send SMS Btn */
+
+
+        /* Table */
+
+        .dataTable {
+            margin-top: 30px;
+            padding-top: 60px;
+            padding-bottom: 40px;
+            box-shadow: 0 4px 8px 1px rgba(36, 49, 64, 0.31);
+        }
+        
+        .table {
+            border-radius: 10px;
+            box-shadow: 0 3px 8px 1px rgb(36,49,64);
+        }
+
+        .table th, .table td {
+            padding: 30px;
+        }
+
+        .table:hover {
+            transform: translateY(0);
+            box-shadow: none !important;
+        }
+
+        /* Table */
+
+
+        /* Modal */
+
+        .modal {
+            margin-top: 0px;
+        }
+        .modal form {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        /* Modal */
+    
+    }
+
+
+
+    
+
+    /* iPad Pro 
+    -------------------------------------------------- */
+
+    @media only screen 
+    and (min-device-width: 1024px) 
+    and (max-device-width: 1366px) 
+    and (orientation: portrait){
+
+        .header {
+            margin-top: 0 !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            border-radius: 0 !important;
+        }
+        .headerContent {
+            font-size: 20px !important;
+        }                
+        ._headerBg {
+            margin-left: 320px;
+            margin-top: 65px;
+        } 
+        ._headerBg img {
+            width: 60px;
+        }
+
+        /*Send SMS Btn*/
+
+        .btnDiv {        
+            margin-top: 100px;
+            margin-left: 250px;
+            margin-right: 250px;
+        }
+
+        .btnDiv button {
+            padding: 20px;
+            font-size: 25px;
+        }
+    
+        .smsBtn:hover {
+            transform: translateY(0);
+            background: rgb(71, 249, 198);
+            box-shadow: 0 2px 6px 1px rgb(36,49,64);
+        }
+        /* Send SMS Btn */
+
+
+        /* Table */
+
+        .dataTable {
+            margin-top: 100px;
+            padding-top: 60px;
+            padding-bottom: 45px;
+            box-shadow: 0 4px 8px 1px rgba(36, 49, 64, 0.31);
+        }
+        
+        .table {
+            border-radius: 10px;
+            box-shadow: 0 3px 8px 1px rgb(36,49,64);
+
+        }
+        .table th, .table td {
+            padding: 45px;
+            font-size: 16px;
+        }
+
+        .table:hover {
+            transform: translateY(0);
+            box-shadow: none !important;
+        }
+
+        /* Table */
+
+
+        /* Modal */
+
+        .modal {
+            margin-top: 25vh;
+        }
+        .modal form {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        /* Modal */
+    
+    }
+
+    /****************************/
+
+    @media only screen 
+    and (min-device-width: 1024px) 
+    and (max-device-width: 1366px) 
+    and (orientation: landscape){
+        
+         .header {
+            margin-top: 0 !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            border-radius: 0 !important;
+        }
+        .headerContent {
+            font-size: 20px !important;
+        }                
+        ._headerBg {
+            margin-left: 490px;
+            margin-top: 65px;
+        } 
+        ._headerBg img {
+            width: 60px;
+        }
+
+        /*Send SMS Btn*/
+
+        .btnDiv {        
+            margin-top: 100px;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+
+        .btnDiv button {
+            padding: 20px;
+            font-size: 25px;
+        }
+    
+        .smsBtn:hover {
+            transform: translateY(0);
+            background: rgb(71, 249, 198);
+            box-shadow: 0 2px 6px 1px rgb(36,49,64);
+        }
+        /* Send SMS Btn */
+
+
+        /* Table */
+
+        .dataTable {
+            margin-top: 90px;
+            padding-top: 60px;
+            padding-bottom: 45px;
+            box-shadow: 0 4px 8px 1px rgba(36, 49, 64, 0.31);
+        }
+        
+        .table {
+            border-radius: 10px;
+            box-shadow: 0 3px 8px 1px rgb(36,49,64);
+
+        }
+        .table th, .table td {
+            padding: 55px;
+            font-size: 19px;
+        }
+
+        .table:hover {
+            transform: translateY(0);
+            box-shadow: none !important;
+        }
+
+        /* Table */
+
+
+        /* Modal */
+
+        .modal {
+            margin-top: 18vh;
+        }
+        .modal form {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        /* Modal */
+    }
+
+
+
+/*============  End of Media Queries  =============*/
